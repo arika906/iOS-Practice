@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="pickerView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="dateLbl" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a5e-tq-aRt">
+                                <rect key="frame" x="0.0" y="530" width="414" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="V86-ZP-ZTd">
+                                <rect key="frame" x="0.0" y="620" width="414" height="162"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="162" id="Wx4-6M-YHX"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="dateView:" destination="BYZ-38-t0r" eventType="valueChanged" id="Xhx-SR-Let"/>
+                                </connections>
+                            </datePicker>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="pickerLabel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i5o-oY-JX1">
+                                <rect key="frame" x="0.0" y="168" width="414" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J7h-zl-aMB">
+                                <rect key="frame" x="0.0" y="306" width="414" height="216"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="QU5-dV-Bfb"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="pvC-zF-Cv6"/>
+                                </connections>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBrownColor" red="0.63529411759999999" green="0.51764705879999995" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="i5o-oY-JX1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="124" id="0Ql-Kc-cej"/>
+                            <constraint firstItem="V86-ZP-ZTd" firstAttribute="top" secondItem="a5e-tq-aRt" secondAttribute="bottom" constant="69" id="0U8-QF-TWg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="a5e-tq-aRt" secondAttribute="trailing" id="6Zh-2r-Mwb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="V86-ZP-ZTd" secondAttribute="bottom" constant="80" id="IFW-4g-kfz"/>
+                            <constraint firstItem="a5e-tq-aRt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="OIS-yX-r3i"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="i5o-oY-JX1" secondAttribute="trailing" id="Q79-0j-uyF"/>
+                            <constraint firstItem="i5o-oY-JX1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Tyw-wb-gbF"/>
+                            <constraint firstItem="V86-ZP-ZTd" firstAttribute="leading" secondItem="J7h-zl-aMB" secondAttribute="leading" id="XvN-hC-fZl"/>
+                            <constraint firstItem="V86-ZP-ZTd" firstAttribute="trailing" secondItem="J7h-zl-aMB" secondAttribute="trailing" id="ZMQ-J3-2nN"/>
+                            <constraint firstItem="V86-ZP-ZTd" firstAttribute="trailing" secondItem="a5e-tq-aRt" secondAttribute="trailing" id="efN-sp-4VI"/>
+                            <constraint firstItem="V86-ZP-ZTd" firstAttribute="leading" secondItem="a5e-tq-aRt" secondAttribute="leading" id="m7P-nF-9W9"/>
+                            <constraint firstItem="a5e-tq-aRt" firstAttribute="top" secondItem="J7h-zl-aMB" secondAttribute="bottom" constant="8" id="zAx-dq-CcO"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="dvLbl" destination="a5e-tq-aRt" id="bWO-B4-6kG"/>
+                        <outlet property="pickerView" destination="J7h-zl-aMB" id="6OK-sj-p2q"/>
+                        <outlet property="pvLbl" destination="i5o-oY-JX1" id="nVg-oP-ZtP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-106" y="81"/>
+        </scene>
+    </scenes>
+</document>
