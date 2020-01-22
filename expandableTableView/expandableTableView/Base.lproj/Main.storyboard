@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="expandableTableView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="oNi-iJ-glW">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="HometableViewCell" rowHeight="475" id="B9q-p8-SYH" customClass="TableViewCell" customModule="expandableTableView" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="475"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="B9q-p8-SYH" id="PA2-9w-oNP">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="475"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BpG-m4-IlP">
+                                                    <rect key="frame" x="0.0" y="5" width="414" height="46"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="46" id="stZ-ez-qY2"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="252" image="Burger" translatesAutoresizingMaskIntoConstraints="NO" id="919-Pm-rDw">
+                                                    <rect key="frame" x="0.0" y="59" width="414" height="416"/>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="919-Pm-rDw" secondAttribute="trailing" id="FPH-QD-iPM"/>
+                                                <constraint firstItem="BpG-m4-IlP" firstAttribute="leading" secondItem="PA2-9w-oNP" secondAttribute="leading" id="OhP-Lk-6gm"/>
+                                                <constraint firstItem="BpG-m4-IlP" firstAttribute="top" secondItem="PA2-9w-oNP" secondAttribute="top" constant="5" id="cHy-WE-Jz6"/>
+                                                <constraint firstItem="919-Pm-rDw" firstAttribute="leading" secondItem="PA2-9w-oNP" secondAttribute="leading" id="cVc-fY-zs2"/>
+                                                <constraint firstAttribute="trailing" secondItem="BpG-m4-IlP" secondAttribute="trailing" id="j6F-ux-Un3"/>
+                                                <constraint firstItem="919-Pm-rDw" firstAttribute="top" secondItem="BpG-m4-IlP" secondAttribute="bottom" constant="8" id="oKc-wJ-iYv"/>
+                                                <constraint firstAttribute="bottom" secondItem="919-Pm-rDw" secondAttribute="bottom" id="wxo-86-hMA"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="img" destination="919-Pm-rDw" id="rX9-MW-54b"/>
+                                            <outlet property="lblTitle" destination="BpG-m4-IlP" id="DCF-7X-qX3"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="ngP-H8-YLZ"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="5hs-Lv-g6N"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="oNi-iJ-glW" secondAttribute="bottom" id="W8c-yf-o6y"/>
+                            <constraint firstItem="oNi-iJ-glW" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="dw3-h6-j3B"/>
+                            <constraint firstItem="oNi-iJ-glW" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="gWL-4g-6DD"/>
+                            <constraint firstItem="oNi-iJ-glW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="iM2-Xn-Fvi"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="tblData" destination="oNi-iJ-glW" id="pME-dD-gE3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-191.30434782608697" y="-52.232142857142854"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Burger" width="500" height="500"/>
+    </resources>
+</document>
