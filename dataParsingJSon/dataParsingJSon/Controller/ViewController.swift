@@ -23,8 +23,6 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         dataloadfromServer()
-        tableView.rowHeight = 100
-        tableView.rowHeight = UITableView.automaticDimension
     }
     
     let headers: HTTPHeaders = ["Authorization":"Token \(token_val)"]
@@ -81,7 +79,8 @@ extension ViewController:UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return CGFloat(view.frame.height/5)
+        //return CGFloat(view.frame.height/5)
+        return UITableView.automaticDimension
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
