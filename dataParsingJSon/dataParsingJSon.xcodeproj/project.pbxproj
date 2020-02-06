@@ -8,18 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		3C82E6C52CFEDFA9254F458B /* Pods_dataParsingJSon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6202E6E707C6D08AC8344FA /* Pods_dataParsingJSon.framework */; };
+		853B225923EBC81B00E89B23 /* AcceptRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853B225823EBC81B00E89B23 /* AcceptRequest.swift */; };
+		853B225B23EBC85100E89B23 /* Receverinfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853B225A23EBC85100E89B23 /* Receverinfo.swift */; };
 		85422DE223E2A19000A9CF45 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85422DE123E2A19000A9CF45 /* AppDelegate.swift */; };
 		85422DE423E2A19000A9CF45 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85422DE323E2A19000A9CF45 /* SceneDelegate.swift */; };
 		85422DE623E2A19000A9CF45 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85422DE523E2A19000A9CF45 /* ViewController.swift */; };
 		85422DE923E2A19000A9CF45 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85422DE723E2A19000A9CF45 /* Main.storyboard */; };
 		85422DEB23E2A19200A9CF45 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85422DEA23E2A19200A9CF45 /* Assets.xcassets */; };
 		85422DEE23E2A19200A9CF45 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85422DEC23E2A19200A9CF45 /* LaunchScreen.storyboard */; };
-		85422E0223E2B9CF00A9CF45 /* AcceptRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85422E0123E2B9CF00A9CF45 /* AcceptRequest.swift */; };
-		85422E0423E2B9D400A9CF45 /* Receverinfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85422E0323E2B9D400A9CF45 /* Receverinfo.swift */; };
 		85422E0623E2BA1700A9CF45 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85422E0523E2BA1700A9CF45 /* TableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		853B225823EBC81B00E89B23 /* AcceptRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcceptRequest.swift; sourceTree = "<group>"; };
+		853B225A23EBC85100E89B23 /* Receverinfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Receverinfo.swift; sourceTree = "<group>"; };
 		85422DDE23E2A19000A9CF45 /* dataParsingJSon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = dataParsingJSon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		85422DE123E2A19000A9CF45 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		85422DE323E2A19000A9CF45 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -28,8 +30,6 @@
 		85422DEA23E2A19200A9CF45 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		85422DED23E2A19200A9CF45 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		85422DEF23E2A19200A9CF45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		85422E0123E2B9CF00A9CF45 /* AcceptRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AcceptRequest.swift; path = "../../../../../Downloads/blood-way/Blood Way/Model/AcceptRequest/AcceptRequest.swift"; sourceTree = "<group>"; };
-		85422E0323E2B9D400A9CF45 /* Receverinfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Receverinfo.swift; path = "../../../../../Downloads/blood-way/Blood Way/Model/AcceptRequest/Receverinfo.swift"; sourceTree = "<group>"; };
 		85422E0523E2BA1700A9CF45 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		B6202E6E707C6D08AC8344FA /* Pods_dataParsingJSon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_dataParsingJSon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8BE441B772008D21E1AD1A7 /* Pods-dataParsingJSon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dataParsingJSon.release.xcconfig"; path = "Target Support Files/Pods-dataParsingJSon/Pods-dataParsingJSon.release.xcconfig"; sourceTree = "<group>"; };
@@ -109,8 +109,8 @@
 		85422DF823E2A46000A9CF45 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				85422E0123E2B9CF00A9CF45 /* AcceptRequest.swift */,
-				85422E0323E2B9D400A9CF45 /* Receverinfo.swift */,
+				853B225823EBC81B00E89B23 /* AcceptRequest.swift */,
+				853B225A23EBC85100E89B23 /* Receverinfo.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -247,12 +247,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				853B225B23EBC85100E89B23 /* Receverinfo.swift in Sources */,
 				85422DE623E2A19000A9CF45 /* ViewController.swift in Sources */,
 				85422DE223E2A19000A9CF45 /* AppDelegate.swift in Sources */,
-				85422E0423E2B9D400A9CF45 /* Receverinfo.swift in Sources */,
 				85422E0623E2BA1700A9CF45 /* TableViewCell.swift in Sources */,
 				85422DE423E2A19000A9CF45 /* SceneDelegate.swift in Sources */,
-				85422E0223E2B9CF00A9CF45 /* AcceptRequest.swift in Sources */,
+				853B225923EBC81B00E89B23 /* AcceptRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
