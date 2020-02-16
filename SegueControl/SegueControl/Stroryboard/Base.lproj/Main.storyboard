@@ -24,7 +24,7 @@
                             </navigationBar>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="uq5-jT-ohj">
                                 <rect key="frame" x="0.0" y="132" width="414" height="179"/>
-                                <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="FuI-v7-jkR">
                                     <size key="itemSize" width="160" height="160"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -69,7 +69,7 @@
                                 <rect key="frame" x="0.0" y="319" width="414" height="543"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="tableViewCell" rowHeight="131" id="Mh6-Z5-aae">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="tableViewCell" rowHeight="131" id="Mh6-Z5-aae" customClass="TableViewCell" customModule="SegueControl" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="131"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Mh6-Z5-aae" id="cbk-gV-fND">
@@ -88,8 +88,15 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <outlet property="tableViewImage" destination="q7t-iY-Pah" id="sXG-wi-RTM"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="SlM-Jj-dWo"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="1SM-0T-0hY"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -113,6 +120,7 @@
                     <navigationItem key="navigationItem" id="V1B-vH-k82"/>
                     <connections>
                         <outlet property="collectionView" destination="uq5-jT-ohj" id="wsr-tv-Bsx"/>
+                        <outlet property="tableView" destination="UvL-5T-elW" id="U7h-4k-nF9"/>
                         <segue destination="JWo-lU-P01" kind="presentation" identifier="show" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="kPQ-Of-pcR"/>
                     </connections>
                 </viewController>
