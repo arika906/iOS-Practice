@@ -25,6 +25,9 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         super.viewDidLoad()
         collectionView.delegate = self
         collectionView.dataSource = self
+        
+        tableView.delegate = self
+        tableView.dataSource = self
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -51,23 +54,29 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
     
+    func numberOfSections(in tableView: UITableView) -> Int {
+        imageArray.count
+    }
     
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 3
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        imageArray.count
+        return 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell :TableViewCell = self.tableView.dequeueReusableCell(withIdentifier: "tableViewCell", for: indexPath) as! TableViewCell
         
-        cell.tableViewImage.image = imageArray[indexPath.row]
+        cell.tableViewImage.image = imageArray[indexPath.section]
         
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc = storyboard?.instantiateViewController(identifier: "SecondViewController") as? SecondViewController
-        vc?.name = imageNameArray[indexPath.row]
+        vc?.name = imageNameArray[indexPath.section]
         self.navigationController?.pushViewController(vc!, animated: true)
     }
     

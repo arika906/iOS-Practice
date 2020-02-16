@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--ok-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="SegueControl" customModuleProvider="target" sceneMemberID="viewController">
@@ -16,14 +16,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YhV-Iu-Tea">
-                                <rect key="frame" x="0.0" y="88" width="414" height="44"/>
-                                <items>
-                                    <navigationItem title="Chat" id="gky-ue-qiU"/>
-                                </items>
-                            </navigationBar>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="uq5-jT-ohj">
-                                <rect key="frame" x="0.0" y="132" width="414" height="179"/>
+                                <rect key="frame" x="0.0" y="72" width="414" height="179"/>
                                 <color key="backgroundColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="FuI-v7-jkR">
                                     <size key="itemSize" width="160" height="160"/>
@@ -33,7 +27,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="collectionViewCell" id="8Zh-J1-9cj" customClass="CollectionViewCell" customModule="SegueControl" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="9.5" width="154" height="160"/>
+                                        <rect key="frame" x="0.0" y="1.5" width="154" height="160"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="fKc-Iu-ciQ">
                                             <rect key="frame" x="0.0" y="0.0" width="154" height="160"/>
@@ -66,7 +60,7 @@
                                 </connections>
                             </collectionView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="UvL-5T-elW">
-                                <rect key="frame" x="0.0" y="319" width="414" height="543"/>
+                                <rect key="frame" x="0.0" y="259" width="414" height="603"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="tableViewCell" rowHeight="131" id="Mh6-Z5-aae" customClass="TableViewCell" customModule="SegueControl" customModuleProvider="target">
@@ -101,23 +95,19 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="YhV-Iu-Tea" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="8Kp-cf-5UJ"/>
                             <constraint firstItem="uq5-jT-ohj" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.2" id="9EM-jE-eW7"/>
                             <constraint firstItem="UvL-5T-elW" firstAttribute="top" secondItem="uq5-jT-ohj" secondAttribute="bottom" constant="8" symbolic="YES" id="ElR-fV-8fe"/>
-                            <constraint firstItem="uq5-jT-ohj" firstAttribute="top" secondItem="YhV-Iu-Tea" secondAttribute="bottom" symbolic="YES" id="IBF-OU-Tnl"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="UvL-5T-elW" secondAttribute="bottom" id="NgJ-fE-3M6"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="UvL-5T-elW" secondAttribute="trailing" id="RSs-R4-w8y"/>
-                            <constraint firstItem="YhV-Iu-Tea" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Vr7-zL-Cey"/>
-                            <constraint firstItem="YhV-Iu-Tea" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="aIa-3N-q9x"/>
-                            <constraint firstItem="YhV-Iu-Tea" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="cg5-uH-bkc"/>
                             <constraint firstItem="UvL-5T-elW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="e4P-gF-Ip3"/>
                             <constraint firstItem="uq5-jT-ohj" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="if1-vZ-Ghb"/>
                             <constraint firstItem="uq5-jT-ohj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="lLA-vL-lre"/>
+                            <constraint firstItem="UvL-5T-elW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="171" id="pce-Bx-bVe"/>
                             <constraint firstItem="uq5-jT-ohj" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="vdn-CY-yjF"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="V1B-vH-k82"/>
+                    <navigationItem key="navigationItem" title="ok" id="V1B-vH-k82"/>
                     <connections>
                         <outlet property="collectionView" destination="uq5-jT-ohj" id="wsr-tv-Bsx"/>
                         <outlet property="tableView" destination="UvL-5T-elW" id="U7h-4k-nF9"/>
