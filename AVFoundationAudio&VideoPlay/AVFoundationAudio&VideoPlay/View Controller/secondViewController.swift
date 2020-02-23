@@ -9,47 +9,60 @@
 import UIKit
 import AVFoundation
 
+var player = AVAudioPlayer()
+var playerItem:AVPlayerItem?
+var timer: Timer?
+
 class secondViewController: UIViewController {
     
+    var name = ""
+    var musicPlaying = ""
+    
     @IBOutlet weak var imageOnSecondViewController: UIImageView!
-    
     @IBOutlet weak var LabelOnSecondViewController: UILabel!
-    
     @IBAction func sliderForMusic(_ sender: UISlider) {
+        player.currentTime = TimeInterval(playBackSlider.value)
+        
+        if (player.isPlaying == true) {
+            //print("k= ","\(playBackSlider.value)")
+            player.play()
+            
+        } else {
+            player.pause()
+            pauseBtn.setImage(UIImage(systemName: "play.fill"), for: .normal)
+            
+        }
         
     }
-    
     @IBOutlet weak var playBackSlider: UISlider!
-    
     @IBOutlet weak var pauseBtn: UIButton!
     @IBAction func pauseAction(_ sender: Any) {
         
         if (player.isPlaying == true) {
             player.pause()
             pauseBtn.setImage(UIImage(systemName: "play.fill"), for: .normal)
+            
         } else {
             player.play()
             pauseBtn.setImage(UIImage(systemName: "pause.fill"), for: .normal)
+            
         }
+        
     }
-    
     @IBOutlet weak var stopBtn: UIButton!
     @IBAction func stopAction(_ sender: Any) {
+        
         player.stop()
+        player.currentTime = 0
+        pauseBtn.setImage(UIImage(systemName: "play.fill"), for: .normal)
+        
     }
-    
     @IBOutlet weak var timeLbl: UILabel!
-    
     @IBAction func Back(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
+        player.stop()
+        
     }
-    
-    var player = AVAudioPlayer()
-    var playerItem:AVPlayerItem?
-    var timer: Timer?
-    
-    var name = ""
-    var musicPlaying = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,19 +71,24 @@ class secondViewController: UIViewController {
         imageOnSecondViewController.image = UIImage(named: name)
         
         playMusic()
+        timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(self.updateSlider), userInfo: nil, repeats: true)
+        
         self.navigationItem.hidesBackButton = true
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         timer?.invalidate()
+        
     }
-    
 }
+
 extension secondViewController{
     
     func playMusic(){
@@ -86,9 +104,7 @@ extension secondViewController{
         
         do {
             player = try AVAudioPlayer(contentsOf: url)
-            playBackSlider.isContinuous = true
             player.play()
-            timer = Timer.scheduledTimer(timeInterval: 0.0001, target: self, selector: #selector(self.updateSlider), userInfo: nil, repeats: true)
             
         }
         catch {
@@ -97,27 +113,11 @@ extension secondViewController{
     }
     
     @objc func updateSlider() {
-        self.playBackSlider.setValue( Float(player.currentTime), animated: true)
-        //timerAction()
+        playBackSlider.value = Float(player.currentTime)
+        
         let minutes = Int(playBackSlider.value) / 60 % 60
         let seconds = Int(playBackSlider.value) % 60
+        
         self.timeLbl.text = "\(String(format:"%02i:%02i", minutes, seconds))"
     }
-    
-    //    func timerAction(){
-    //        let Range =  playBackSlider.maximumValue - playBackSlider.minimumValue;
-    //        let Increment = Range/100;
-    //        let newval = playBackSlider.value + Increment;
-    //        if(Increment <= playBackSlider.maximumValue)
-    //        {
-    //            playBackSlider.setValue(newval, animated: true)
-    //            print("The value of the slider is now \(playBackSlider.value)")
-    //            //sliderValue = Int(playBackSlider.value)
-    //        }
-    //        else if (Increment >= playBackSlider.minimumValue)
-    //        {
-    //            playBackSlider.setValue(newval, animated: true)
-    //        }
-    //    }
-    
 }
